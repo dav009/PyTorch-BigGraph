@@ -72,7 +72,7 @@ class ParquetEdgelistReader(EdgelistReader):
                 "'pip install parquet'"
             )
 
-        with path.open("rt") as tf:
+        with path.open("rb") as tf:
             columns = [self.lhs_col, self.rhs_col]
             if self.rel_col is not None:
                 columns.append(self.rel_col)
